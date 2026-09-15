@@ -5753,3 +5753,1158 @@ button {
 * {
   max-width: 100%;
 }
+/* =====================================================
+   MOBILE BILLING PAYMENT BUTTONS FIX
+===================================================== */
+
+@media (max-width: 480px) {
+  .payment-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
+  }
+
+  .payment-button {
+    width: 100%;
+    min-width: 0;
+    padding: 11px 6px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+}
+/* =========================================================
+   FINAL RESPONSIVE FIX
+   Laptop + Tablet + Mobile
+   ========================================================= */
+
+/* ---------- GLOBAL SAFETY ---------- */
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent flex/grid children from creating horizontal overflow */
+.dashboard-content,
+.dashboard-content > *,
+.billing-page,
+.menu-page,
+.orders-page,
+.delivery-page,
+.reports-page,
+.settings-page,
+.tables-page,
+.expenses-page {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* =========================================================
+   DESKTOP / LAPTOP
+   ========================================================= */
+
+@media (min-width: 1101px) {
+
+  .dashboard {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-shrink: 0;
+  }
+
+  .dashboard-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 30px;
+  }
+
+  .sidebar-menu {
+    overflow: visible;
+  }
+
+  /* Keep large tables inside their cards */
+  .orders-card,
+  .delivery-card,
+  .reports-section,
+  .reports-main-card {
+    min-width: 0;
+    overflow-x: auto;
+  }
+}
+
+/* =========================================================
+   TABLET
+   769px - 1100px
+
+   Sidebar becomes a top navigation.
+   This gives the page the full tablet width.
+   ========================================================= */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+
+  .dashboard {
+    width: 100%;
+    min-height: 100vh;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+  }
+
+  /* TOP SIDEBAR */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 86px;
+
+    padding: 10px 18px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+
+    overflow: hidden;
+
+    z-index: 1000;
+  }
+
+  /* Compact logo area */
+  .sidebar .brand,
+  .sidebar .sidebar-brand {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 0;
+    border: none;
+  }
+
+  .sidebar .logo_icon {
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .sidebar .brand h2,
+  .sidebar .sidebar-brand h2 {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .sidebar .brand span,
+  .sidebar .sidebar-brand p {
+    font-size: 9px;
+  }
+
+  /* NAVIGATION SCROLL */
+  .sidebar-menu {
+    flex: 1;
+    min-width: 0;
+
+    margin: 0;
+    padding: 4px 0;
+
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    white-space: nowrap;
+
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+
+    overscroll-behavior-x: contain;
+  }
+
+  .sidebar-menu::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  .sidebar-menu::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.25);
+    border-radius: 10px;
+  }
+
+  .menu-item {
+    width: auto;
+    flex: 0 0 auto;
+
+    padding: 10px 14px;
+    font-size: 12px;
+
+    white-space: nowrap;
+  }
+
+  /* Logout stays accessible */
+  .logout-button {
+    width: auto;
+    flex: 0 0 auto;
+
+    margin: 0;
+    padding: 10px 14px;
+
+    font-size: 12px;
+  }
+
+  /* MAIN CONTENT */
+  .dashboard-content {
+    width: 100%;
+    height: 100vh;
+
+    margin-left: 0;
+
+    padding: 115px 24px 30px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Dashboard */
+  .summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Billing */
+  .billing-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .food-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* Menu */
+  .menu-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* Reports */
+  .reports-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .reports-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .performance-chart {
+    gap: 45px;
+  }
+
+  /* Settings */
+  .settings-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Expenses */
+  .expenses-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .category-breakdown-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Headers */
+  .billing-topbar,
+  .menu-topbar,
+  .orders-header,
+  .delivery-header,
+  .reports-header,
+  .settings-header,
+  .tables-header,
+  .expenses-header {
+    gap: 15px;
+  }
+
+  /* Make wide content scroll instead of breaking layout */
+  .orders-card,
+  .delivery-card,
+  .reports-section,
+  .reports-main-card {
+    overflow-x: auto;
+  }
+
+  .orders-table,
+  .delivery-table {
+    min-width: 650px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   0px - 768px
+
+   Navigation becomes a horizontal scrollable bar.
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    min-height: 100%;
+  }
+
+  body {
+    overflow: hidden;
+  }
+
+  .dashboard {
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+
+    display: block;
+
+    overflow: hidden;
+  }
+
+  /* =======================================================
+     MOBILE SIDEBAR / NAVIGATION
+     ======================================================= */
+
+  .sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+    min-height: 76px;
+
+    padding: 8px 12px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 10px;
+
+    overflow: hidden;
+
+    z-index: 1000;
+  }
+
+  /* Compact brand */
+  .sidebar .brand,
+  .sidebar .sidebar-brand {
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+  }
+
+  .sidebar .logo_icon {
+    width: 44px;
+    height: 44px;
+
+    margin: 0;
+
+    font-size: 16px;
+  }
+
+  .sidebar .brand h2,
+  .sidebar .sidebar-brand h2 {
+    font-size: 13px;
+    margin: 0;
+  }
+
+  .sidebar .brand span,
+  .sidebar .sidebar-brand p {
+    font-size: 8px;
+  }
+
+  /* =======================================================
+     IMPORTANT:
+     TABS ARE NOW HORIZONTALLY SCROLLABLE
+     ======================================================= */
+
+  .sidebar-menu {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+    flex-direction: row;
+
+    gap: 6px;
+
+    margin: 0;
+    padding: 2px 0;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    white-space: nowrap;
+
+    -webkit-overflow-scrolling: touch;
+
+    overscroll-behavior-x: contain;
+
+    scrollbar-width: thin;
+  }
+
+  .sidebar-menu::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  .sidebar-menu::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .sidebar-menu::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+  }
+
+  .menu-item {
+    flex: 0 0 auto;
+
+    width: auto;
+
+    padding: 9px 12px;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+
+    border-radius: 8px;
+  }
+
+  .logout-button {
+    flex: 0 0 auto;
+
+    width: auto;
+
+    margin: 0;
+
+    padding: 9px 11px;
+
+    font-size: 10px;
+  }
+
+  /* =======================================================
+     MAIN CONTENT
+     ======================================================= */
+
+  .dashboard-content {
+    width: 100%;
+    height: 100vh;
+
+    margin-left: 0;
+
+    padding: 95px 15px 30px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    -webkit-overflow-scrolling: touch;
+
+    overscroll-behavior-y: contain;
+  }
+
+  /* =======================================================
+     HEADERS
+     ======================================================= */
+
+  .dashboard-header,
+  .billing-topbar,
+  .menu-topbar,
+  .orders-header,
+  .delivery-header,
+  .reports-header,
+  .settings-header,
+  .tables-header,
+  .expenses-header {
+    width: 100%;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+  }
+
+  .dashboard-header h1,
+  .billing-topbar h1,
+  .menu-topbar h1,
+  .orders-header h1,
+  .delivery-header h1,
+  .reports-header h1,
+  .settings-header h1,
+  .tables-header h1 {
+    font-size: 24px !important;
+  }
+
+  /* Back buttons */
+  .back-dashboard,
+  .menu-back-button,
+  .orders-back-button,
+  .delivery-back-button,
+  .reports-back-button,
+  .settings-back-button,
+  .tables-back-button,
+  .expenses-back-button {
+    width: 100%;
+  }
+
+  /* =======================================================
+     DASHBOARD
+     ======================================================= */
+
+  .summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+  .summary-card {
+    padding: 15px;
+    min-width: 0;
+  }
+
+  .summary-card h2 {
+    font-size: 21px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .dashboard-card {
+    padding: 17px;
+
+    min-width: 0;
+  }
+
+  /* =======================================================
+     BILLING
+     ======================================================= */
+
+  .billing-page,
+  .menu-page,
+  .orders-page,
+  .delivery-page,
+  .reports-page,
+  .settings-page,
+  .tables-page {
+    width: 100%;
+    min-width: 0;
+
+    padding: 5px 0 35px;
+  }
+
+  .billing-settings {
+    flex-direction: column;
+  }
+
+  .setting-box {
+    width: 100%;
+  }
+
+  .billing-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .food-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .food-section,
+  .cart-section {
+    padding: 15px;
+
+    min-width: 0;
+  }
+
+  .payment-buttons {
+    flex-wrap: wrap;
+  }
+
+  .payment-button {
+    min-width: calc(50% - 5px);
+  }
+
+  /* =======================================================
+     MENU
+     ======================================================= */
+
+  .menu-tools {
+    width: 100%;
+  }
+
+  .menu-search {
+    width: 100%;
+
+    color: #1e293b !important;
+    background: white !important;
+  }
+
+  .menu-categories,
+  .category-list {
+    width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    display: flex;
+
+    flex-wrap: nowrap;
+
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: thin;
+
+    padding-bottom: 7px;
+  }
+
+  .menu-category,
+  .category-button {
+    flex: 0 0 auto;
+
+    white-space: nowrap;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .menu-food-card {
+    min-width: 0;
+  }
+
+  .menu-actions {
+    flex-direction: column;
+  }
+
+  .availability-button,
+  .delete-button {
+    width: 100%;
+  }
+
+  /* =======================================================
+     ORDERS
+     ======================================================= */
+
+  .orders-filter-card {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .orders-search {
+    width: 100%;
+
+    color: #1e293b !important;
+    background: white !important;
+  }
+
+  .orders-card {
+    width: 100%;
+
+    padding: 15px;
+
+    overflow-x: auto;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /*
+     On mobile orders become cards.
+     No horizontal scrolling required.
+  */
+  .orders-table {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .orders-table-header {
+    display: none !important;
+  }
+
+  .orders-row {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  /* =======================================================
+     DELIVERY
+     ======================================================= */
+
+  .delivery-filter-card {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .delivery-search {
+    width: 100%;
+
+    color: #1e293b !important;
+    background: white !important;
+  }
+
+  .delivery-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .delivery-summary-card {
+    padding: 14px;
+  }
+
+  .delivery-card {
+    width: 100%;
+
+    padding: 15px;
+
+    overflow-x: auto;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .delivery-table {
+    min-width: 0;
+    width: 100%;
+
+    overflow-x: visible;
+  }
+
+  .delivery-table-header {
+    display: none !important;
+  }
+
+  .delivery-table-row {
+    width: 100%;
+
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 7px;
+
+    padding: 14px 0;
+  }
+
+  /* =======================================================
+     REPORTS
+     ======================================================= */
+
+  .report-period {
+    width: 100%;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+  .report-period select {
+    width: 100%;
+  }
+
+  .reports-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .report-card {
+    padding: 14px;
+
+    min-width: 0;
+  }
+
+  .report-card strong {
+    font-size: 18px;
+  }
+
+  .reports-main-card,
+  .reports-section {
+    width: 100%;
+
+    padding: 15px;
+
+    overflow-x: auto;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .performance-chart {
+    min-width: 430px;
+
+    gap: 35px;
+  }
+
+  .comparison-section {
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .comparison-item {
+    width: 100%;
+  }
+
+  .comparison-arrow {
+    transform: rotate(90deg);
+  }
+
+  .reports-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-report-table {
+    min-width: 430px;
+  }
+
+  /* =======================================================
+     SETTINGS
+     ======================================================= */
+
+  .settings-form {
+    width: 100%;
+    max-width: none;
+  }
+
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-card {
+    width: 100%;
+
+    padding: 16px;
+  }
+
+  .settings-footer {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    width: 100%;
+  }
+
+  .settings-save-button {
+    width: 100%;
+  }
+
+  /* =======================================================
+     TABLES
+     ======================================================= */
+
+  .table-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .tables-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .table-card {
+    min-width: 0;
+
+    padding: 13px;
+  }
+
+  .table-top {
+    flex-direction: column;
+
+    gap: 7px;
+  }
+
+  .table-status {
+    align-self: center;
+  }
+
+  /* =======================================================
+     EXPENSES
+     ======================================================= */
+
+  .expenses-page {
+    width: 100%;
+
+    padding: 5px 0 35px;
+  }
+
+  .expenses-summary {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .expense-form-card {
+    padding: 18px;
+
+    width: 100%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .category-breakdown-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* =======================================================
+     PROFILE DROPDOWN
+     ======================================================= */
+
+  .profile-dropdown {
+    position: fixed;
+
+    top: 70px;
+    right: 12px;
+    left: 12px;
+
+    width: auto;
+
+    max-width: none;
+  }
+
+  /* =======================================================
+     IMAGES
+     ======================================================= */
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   0 - 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .sidebar {
+    min-height: 68px;
+
+    padding: 7px 8px;
+
+    gap: 6px;
+  }
+
+  .sidebar .logo_icon {
+    width: 38px;
+    height: 38px;
+
+    font-size: 14px;
+  }
+
+  .sidebar .brand h2,
+  .sidebar .sidebar-brand h2 {
+    display: none;
+  }
+
+  .sidebar .brand span,
+  .sidebar .sidebar-brand p {
+    display: none;
+  }
+
+  .sidebar-menu {
+    gap: 5px;
+  }
+
+  .menu-item {
+    padding: 8px 10px;
+
+    font-size: 10px;
+  }
+
+  .logout-button {
+    padding: 8px 9px;
+
+    font-size: 9px;
+  }
+
+  .dashboard-content {
+    padding: 82px 10px 25px;
+  }
+
+  /* Dashboard cards */
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-header h1,
+  .billing-topbar h1,
+  .menu-topbar h1,
+  .orders-header h1,
+  .delivery-header h1,
+  .reports-header h1,
+  .settings-header h1,
+  .tables-header h1 {
+    font-size: 21px !important;
+  }
+
+  /* Billing */
+  .food-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .food-image {
+    height: 90px;
+  }
+
+  /* Menu */
+  .menu-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .menu-food-image {
+    height: 100px;
+  }
+
+  /* Delivery */
+  .delivery-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Reports */
+  .reports-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .performance-chart {
+    min-width: 380px;
+
+    gap: 25px;
+  }
+
+  /* Tables */
+  .tables-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Search fields */
+  .menu-search,
+  .orders-search,
+  .delivery-search {
+    width: 100%;
+
+    min-height: 44px;
+
+    color: #1e293b !important;
+    background: #ffffff !important;
+  }
+
+  /* Touch-friendly controls */
+  button,
+  select,
+  input,
+  textarea {
+    min-height: 42px;
+  }
+}
+
+/* =========================================================
+   TOUCH DEVICE FIX
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+  .sidebar-menu,
+  .menu-categories,
+  .category-list {
+    scrollbar-width: auto;
+
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+  }
+
+  .dashboard-content {
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+  }
+
+  button {
+    touch-action: manipulation;
+  }
+}
