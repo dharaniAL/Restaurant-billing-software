@@ -8,7 +8,7 @@ function Reports({ goBack }) {
   const fetchReports = () => {
     setLoading(true);
 
-    fetch("http://localhost:5000/api/reports")
+    fetch("https://restaurant-billing-backend-jqh6.onrender.com/api/reports")
       .then((response) => response.json())
       .then((data) => {
         console.log("Reports received:", data);

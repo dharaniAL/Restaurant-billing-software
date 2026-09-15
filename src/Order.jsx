@@ -15,7 +15,7 @@ function Orders({ goBack, currentUser }) {
   const fetchOrders = () => {
     setLoading(true);
 
-    fetch("http://localhost:5000/api/orders")
+    fetch("https://restaurant-billing-backend-jqh6.onrender.com/api/orders")
       .then((response) => response.json())
       .then((data) => {
         console.log("Orders received:", data);
@@ -86,7 +86,7 @@ deliveredTime: order.delivered_time
   const changeStatus = async (orderId, newStatus) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/orders/${orderId}/status`,
+        `https://restaurant-billing-backend-jqh6.onrender.com/api/orders/${orderId}/status`,
         {
           method: "PUT",
           headers: {

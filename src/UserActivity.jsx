@@ -15,7 +15,7 @@ function UserActivity({ goBack }) {
       setError("");
 
       const response = await fetch(
-        "http://localhost:5000/api/user-activity"
+        "https://restaurant-billing-backend-jqh6.onrender.com/api/user-activity"
       );
 
       const data = await response.json();

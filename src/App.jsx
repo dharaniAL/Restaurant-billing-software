@@ -52,7 +52,7 @@ function App() {
   const fetchDashboard = async (period = comparisonPeriod) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/dashboard?period=${period}`
+        `https://restaurant-billing-backend-jqh6.onrender.com/api/dashboard?period=${period}`
       );
 
       const data = await response.json();
@@ -92,7 +92,7 @@ function App() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/login",
+        "https://restaurant-billing-backend-jqh6.onrender.com/api/login",
         {
           method: "POST",
           headers: {

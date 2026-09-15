@@ -10,7 +10,7 @@ function Expenses() {
   // Fetch expenses
   const fetchExpenses = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/expenses");
+      const response = await fetch("/api/expenses");
       const data = await response.json();
 
       if (data.success) {
@@ -35,7 +35,7 @@ function Expenses() {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/expenses", {
+      const response = await fetch("https://restaurant-billing-backend-jqh6.onrender.com/api/expenses", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

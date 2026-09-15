@@ -4714,3 +4714,1042 @@ body {
     font-size: 28px;
   }
 }
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   LAPTOP + TABLET + MOBILE
+===================================================== */
+
+
+/* =====================================================
+   LAPTOP
+   1101px - 1400px
+===================================================== */
+
+@media (min-width: 1101px) and (max-width: 1400px) {
+
+  .sidebar {
+    width: 230px;
+  }
+
+  .dashboard-content {
+    margin-left: 230px;
+    width: calc(100vw - 230px);
+    padding: 25px;
+  }
+
+  .summary-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .billing-layout {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 18px;
+  }
+
+  .food-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .reports-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reports-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tables-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+/* =====================================================
+   TABLET
+   769px - 1100px
+===================================================== */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+
+  /* ==============================
+     SIDEBAR
+  ============================== */
+
+  .sidebar {
+    width: 210px;
+    padding: 20px 13px;
+  }
+
+  .dashboard-content {
+    margin-left: 210px;
+    width: calc(100vw - 210px);
+    padding: 22px;
+  }
+
+
+  /* ==============================
+     GENERAL
+  ============================== */
+
+  .dashboard,
+  .dashboard-content,
+  .billing-page,
+  .menu-page,
+  .orders-page,
+  .delivery-page,
+  .reports-page,
+  .settings-page,
+  .tables-page,
+  .expenses-page,
+  .user-activity-page {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+
+  /* ==============================
+     HEADINGS
+  ============================== */
+
+  .dashboard-header h1,
+  .billing-topbar h1,
+  .menu-topbar h1,
+  .orders-header h1,
+  .delivery-header h1,
+  .reports-header h1,
+  .settings-page > h1,
+  .tables-header h1,
+  .expenses-header h1 {
+    font-size: 27px !important;
+  }
+
+
+  /* ==============================
+     DASHBOARD
+  ============================== */
+
+  .dashboard-header {
+    gap: 15px;
+  }
+
+  .summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .summary-card {
+    padding: 17px;
+  }
+
+  .summary-card h2 {
+    font-size: 24px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .dashboard-card {
+    padding: 18px;
+  }
+
+
+  /* ==============================
+     BILLING
+  ============================== */
+
+  .billing-page {
+    padding: 10px 5px 35px;
+  }
+
+  .billing-layout {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 15px;
+  }
+
+  .food-section,
+  .cart-section {
+    padding: 16px;
+  }
+
+  .food-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 11px;
+  }
+
+  .food-image {
+    height: 85px;
+  }
+
+  .billing-settings {
+    gap: 10px;
+  }
+
+  .payment-buttons {
+    gap: 7px;
+  }
+
+  .payment-button {
+    padding: 9px 6px;
+    font-size: 11px;
+  }
+
+
+  /* ==============================
+     MENU
+  ============================== */
+
+  .menu-page {
+    padding: 10px 5px 35px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+  }
+
+  .menu-food-image {
+    height: 100px;
+  }
+
+  .menu-food-details {
+    padding: 10px;
+  }
+
+  .menu-actions {
+    padding: 10px;
+  }
+
+
+  /* ==============================
+     ORDERS
+  ============================== */
+
+  .orders-page {
+    padding: 10px 5px 35px;
+  }
+
+  .orders-filter-card {
+    gap: 10px;
+  }
+
+  .orders-card {
+    overflow-x: auto;
+  }
+
+  .orders-table {
+    min-width: 850px;
+  }
+
+  .orders-row {
+    min-width: 850px;
+  }
+
+
+  /* ==============================
+     DELIVERY
+  ============================== */
+
+  .delivery-page {
+    padding: 10px 5px 35px;
+  }
+
+  .delivery-summary {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .delivery-card {
+    padding: 17px;
+  }
+
+  .delivery-table {
+    overflow-x: auto;
+  }
+
+  .delivery-table-row {
+    min-width: 700px;
+  }
+
+
+  /* ==============================
+     REPORTS
+  ============================== */
+
+  .reports-page {
+    padding: 10px 5px 35px;
+  }
+
+  .reports-summary {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .reports-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .performance-chart {
+    gap: 40px;
+  }
+
+  .comparison-section {
+    gap: 18px;
+  }
+
+
+  /* ==============================
+     SETTINGS
+  ============================== */
+
+  .settings-page {
+    padding: 20px 20px 35px;
+  }
+
+  .settings-card {
+    padding: 24px 26px;
+  }
+
+  .settings-grid,
+  .settings-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+
+  /* ==============================
+     TABLES
+  ============================== */
+
+  .tables-page {
+    padding: 10px 5px 35px;
+  }
+
+  .tables-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px;
+  }
+
+
+  /* ==============================
+     EXPENSES
+  ============================== */
+
+  .expenses-page {
+    padding: 22px 20px 35px;
+  }
+
+  .expenses-summary {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .expense-summary-card {
+    padding: 17px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .category-breakdown-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .expenses-card {
+    overflow-x: auto;
+  }
+
+  .expenses-table {
+    min-width: 700px;
+  }
+
+
+  /* ==============================
+     USER ACTIVITY
+  ============================== */
+
+  .user-activity-page {
+    padding: 22px 20px 35px;
+  }
+
+  .user-activity-header {
+    gap: 15px;
+  }
+
+  .user-activity-header h1 {
+    font-size: 30px;
+  }
+
+  .activity-summary {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .activity-summary-card {
+    padding: 18px;
+  }
+
+  .activity-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .activity-table {
+    min-width: 950px;
+  }
+
+
+  /* ==============================
+     INPUTS / BUTTONS
+  ============================== */
+
+  input,
+  select,
+  textarea,
+  button {
+    max-width: 100%;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+   481px - 768px
+===================================================== */
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+  /* ==============================
+     SIDEBAR
+  ============================== */
+
+  .sidebar {
+    width: 200px;
+    padding: 18px 12px;
+  }
+
+  .dashboard-content {
+    margin-left: 200px;
+    width: calc(100vw - 200px);
+    padding: 18px;
+  }
+
+
+  /* ==============================
+     HEADERS
+  ============================== */
+
+  .dashboard-header,
+  .billing-topbar,
+  .menu-topbar,
+  .orders-header,
+  .delivery-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .dashboard-header h1,
+  .billing-topbar h1,
+  .menu-topbar h1,
+  .orders-header h1,
+  .delivery-header h1,
+  .reports-header h1,
+  .settings-page > h1,
+  .tables-header h1,
+  .expenses-header h1 {
+    font-size: 26px !important;
+  }
+
+
+  /* ==============================
+     DASHBOARD
+  ============================== */
+
+  .summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+
+  /* ==============================
+     BILLING
+  ============================== */
+
+  .billing-layout {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .food-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .billing-settings {
+    flex-direction: column;
+  }
+
+
+  /* ==============================
+     MENU
+  ============================== */
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .menu-food-image {
+    height: 100px;
+  }
+
+
+  /* ==============================
+     ORDERS
+  ============================== */
+
+  .orders-filter-card {
+    flex-direction: column;
+  }
+
+  .orders-card {
+    overflow-x: auto;
+  }
+
+  .orders-table {
+    min-width: 800px;
+  }
+
+
+  /* ==============================
+     DELIVERY
+  ============================== */
+
+  .delivery-filter-card {
+    flex-direction: column;
+  }
+
+  .delivery-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .delivery-table {
+    overflow-x: auto;
+  }
+
+  .delivery-table-row {
+    min-width: 700px;
+  }
+
+
+  /* ==============================
+     REPORTS
+  ============================== */
+
+  .reports-summary {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .reports-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-section {
+    flex-direction: column;
+  }
+
+
+  /* ==============================
+     SETTINGS
+  ============================== */
+
+  .settings-page {
+    padding: 18px 15px 30px;
+  }
+
+  .settings-card {
+    padding: 22px 18px;
+  }
+
+  .settings-grid,
+  .settings-row {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* ==============================
+     TABLES
+  ============================== */
+
+  .tables-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+
+  /* ==============================
+     EXPENSES
+  ============================== */
+
+  .expenses-page {
+    padding: 20px 15px 30px;
+  }
+
+  .expenses-summary {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .category-breakdown-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .expenses-card {
+    overflow-x: auto;
+  }
+
+
+  /* ==============================
+     USER ACTIVITY
+  ============================== */
+
+  .user-activity-page {
+    padding: 20px 15px 30px;
+  }
+
+  .user-activity-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .activity-header-buttons {
+    width: 100%;
+  }
+
+  .activity-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .activity-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .activity-table-wrapper {
+    overflow-x: auto;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   480px and below
+===================================================== */
+
+@media (max-width: 480px) {
+
+  /* ==============================
+     SIDEBAR
+  ============================== */
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 15px;
+  }
+
+  .dashboard-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 15px;
+  }
+
+
+  /* ==============================
+     GENERAL
+  ============================== */
+
+  .dashboard,
+  .dashboard-content,
+  .billing-page,
+  .menu-page,
+  .orders-page,
+  .delivery-page,
+  .reports-page,
+  .settings-page,
+  .tables-page,
+  .expenses-page,
+  .user-activity-page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+
+  /* ==============================
+     HEADERS
+  ============================== */
+
+  .dashboard-header,
+  .billing-topbar,
+  .menu-topbar,
+  .orders-header,
+  .delivery-header,
+  .reports-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .dashboard-header h1,
+  .billing-topbar h1,
+  .menu-topbar h1,
+  .orders-header h1,
+  .delivery-header h1,
+  .reports-header h1,
+  .settings-page > h1,
+  .tables-header h1,
+  .expenses-header h1 {
+    font-size: 24px !important;
+  }
+
+
+  /* ==============================
+     DASHBOARD
+  ============================== */
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+
+  /* ==============================
+     BILLING
+  ============================== */
+
+  .billing-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .food-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .food-image {
+    height: 90px;
+  }
+
+  .billing-settings {
+    flex-direction: column;
+  }
+
+  .payment-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  /* ==============================
+     MENU
+  ============================== */
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .menu-food-image {
+    height: 90px;
+  }
+
+
+  /* ==============================
+     ORDERS
+  ============================== */
+
+  .orders-filter-card {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .orders-search {
+    width: 100%;
+  }
+
+  .orders-card {
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .orders-table {
+    min-width: 780px;
+  }
+
+
+  /* ==============================
+     DELIVERY
+  ============================== */
+
+  .delivery-filter-card {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .delivery-search {
+    width: 100%;
+  }
+
+  .delivery-summary {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .delivery-table {
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .delivery-table-row {
+    min-width: 680px;
+  }
+
+
+  /* ==============================
+     REPORTS
+  ============================== */
+
+  .reports-summary {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .reports-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-section {
+    flex-direction: column;
+  }
+
+  .performance-chart {
+    gap: 20px;
+  }
+
+
+  /* ==============================
+     SETTINGS
+  ============================== */
+
+  .settings-page {
+    padding: 15px 12px 25px;
+  }
+
+  .settings-card {
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+
+  .settings-grid,
+  .settings-row {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-card input,
+  .settings-card select {
+    font-size: 14px;
+  }
+
+  .settings-card button {
+    width: 100%;
+  }
+
+
+  /* ==============================
+     TABLES
+  ============================== */
+
+  .tables-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+
+  /* ==============================
+     EXPENSES
+  ============================== */
+
+  .expenses-page {
+    padding: 15px 12px 25px;
+  }
+
+  .expenses-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .category-breakdown-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .expenses-card {
+    overflow-x: auto;
+  }
+
+
+  /* ==============================
+     USER ACTIVITY
+  ============================== */
+
+  .user-activity-page {
+    padding: 18px 12px 25px;
+  }
+
+  .user-activity-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .activity-header-buttons {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+  }
+
+  .activity-refresh-button,
+  .activity-back-button {
+    flex: 1;
+  }
+
+  .activity-summary {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .activity-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .activity-table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .activity-table {
+    min-width: 900px;
+  }
+
+
+  /* ==============================
+     LOGIN
+  ============================== */
+
+  .login-container {
+    flex-direction: column;
+    gap: 25px;
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .welcome-section {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .login-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+
+  /* ==============================
+     SEARCH INPUTS
+  ============================== */
+
+  .menu-search,
+  .orders-search,
+  .delivery-search {
+    color: #1e293b !important;
+    background: #ffffff !important;
+  }
+
+  .menu-search::placeholder,
+  .orders-search::placeholder,
+  .delivery-search::placeholder {
+    color: #94a3b8 !important;
+  }
+
+
+  /* ==============================
+     TOUCH FRIENDLY CONTROLS
+  ============================== */
+
+  button,
+  input,
+  select,
+  textarea {
+    min-height: 42px;
+  }
+}
+
+
+/* =====================================================
+   EXTRA SAFETY FOR ALL DEVICES
+===================================================== */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+select,
+textarea,
+button {
+  box-sizing: border-box;
+}
+
+* {
+  max-width: 100%;
+}

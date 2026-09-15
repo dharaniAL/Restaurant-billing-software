@@ -14,7 +14,7 @@ function Tables({ goBack, currentUser }) {
       setError("");
 
       const response = await fetch(
-        "http://localhost:5000/api/tables"
+        "https://restaurant-billing-backend-jqh6.onrender.com/api/tables"
       );
 
       const data = await response.json();
@@ -50,7 +50,7 @@ function Tables({ goBack, currentUser }) {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/tables/${tableId}/settle`,
+        `https://restaurant-billing-backend-jqh6.onrender.com/api/tables/${tableId}/settle`,
         {
           method: "PUT",
           headers: {
@@ -86,7 +86,7 @@ const reserveTable = async (tableId) => {
 
   try {
     const response = await fetch(
-      `http://localhost:5000/api/tables/${tableId}/reserve`,
+      `https://restaurant-billing-backend-jqh6.onrender.com/api/tables/${tableId}/reserve`,
       {
         method: "PUT",
         headers: {

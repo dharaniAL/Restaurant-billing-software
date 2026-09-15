@@ -13,7 +13,7 @@ function Tables({ goBack }) {
   const fetchTables = () => {
     setLoading(true);
 
-    fetch("http://localhost:5000/api/tables")
+    fetch("https://restaurant-billing-backend-jqh6.onrender.com/api/tables")
       .then((response) => response.json())
       .then((data) => {
         console.log("Tables received:", data);
@@ -93,7 +93,7 @@ function Tables({ goBack }) {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/tables/${id}/settle`,
+        `https://restaurant-billing-backend-jqh6.onrender.com/api/tables/${id}/settle`,
         {
           method: "PUT",
         }

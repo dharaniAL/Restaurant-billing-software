@@ -18,7 +18,7 @@ function Delivery({ goBack, currentUser }) {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/deliveries"
+        "https://restaurant-billing-backend-jqh6.onrender.com/api/deliveries"
       );
 
       const data = await response.json();
@@ -132,7 +132,7 @@ function Delivery({ goBack, currentUser }) {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/orders/${orderId}/status`,
+        `https://restaurant-billing-backend-jqh6.onrender.com/api/orders/${orderId}/status`,
         {
           method: "PUT",
 

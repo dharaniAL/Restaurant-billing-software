@@ -36,7 +36,7 @@ function Expenses({ goBack, currentUser }) {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/expenses"
+        "https://restaurant-billing-backend-jqh6.onrender.com/api/expenses"
       );
 
       const data = await response.json();
@@ -142,8 +142,8 @@ function Expenses({ goBack, currentUser }) {
 
     try {
       const endpoint = editingId
-        ? `http://localhost:5000/api/expenses/${editingId}`
-        : "http://localhost:5000/api/expenses";
+        ? `https://restaurant-billing-backend-jqh6.onrender.com/api/expenses/${editingId}`
+        : "https://restaurant-billing-backend-jqh6.onrender.com/api/expenses";
 
       const method = editingId
         ? "PUT"
@@ -216,7 +216,7 @@ function Expenses({ goBack, currentUser }) {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/expenses/${id}`,
+        `https://restaurant-billing-backend-jqh6.onrender.com/api/expenses/${id}`,
         {
           method: "DELETE",
           headers: {

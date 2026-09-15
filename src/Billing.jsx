@@ -184,7 +184,7 @@ function Billing({ goBack, currentUser }) {
 
   try {
     const response = await fetch(
-      "http://localhost:5000/api/bills",
+      "https://restaurant-billing-backend-jqh6.onrender.com/api/bills",
       {
         method: "POST",
         headers: {
