@@ -72,7 +72,8 @@ body {
   letter-spacing: 4px;
   font-size: 14px;
   margin-bottom: 12px;
-  opacity: 0.8;
+  color: #ffffff !important;
+  opacity: 1 !important;
   font-weight: 600;
 }
 
@@ -89,7 +90,8 @@ body {
 .welcome-section h2 {
   font-size: 42px;
   margin-bottom: 20px;
-  color: white;
+  color: #ffffff !important;
+  opacity: 1 !important;
   font-weight: 600;
 }
 
@@ -816,7 +818,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 80px;
+  gap: 120px;
   height: 220px;
   padding: 20px 0;
 }
@@ -825,7 +827,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
   gap: 12px;
+  min-width: 80px;
 }
 
 .profit-column span {
@@ -836,6 +840,7 @@ body {
 
 .bar {
   width: 60px;
+  flex-shrink: 0;
   border-radius: 8px 8px 0 0;
   transition: 0.3s;
 }
@@ -848,6 +853,17 @@ body {
 .current-bar {
   height: 160px;
   background: linear-gradient(180deg, #3b82f6, #06b6d4);
+}
+.profit-column > span {
+  color: #1e293b !important;
+  opacity: 1 !important;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.profit-column > strong {
+  color: #1e293b !important;
+  opacity: 1 !important;
 }
 
 .profit-column strong {
@@ -1177,7 +1193,20 @@ body {
   display: flex;
   flex-direction: column;
 }
+.cart-section h2 {
+  color: #1e293b !important;
+  opacity: 1 !important;
+}
 
+.cart-section .billing-label {
+  color: #64748b !important;
+  opacity: 1 !important;
+}
+
+.cart-section .cart-count {
+  color: #1e40af !important;
+  opacity: 1 !important;
+}
 .cart-header {
   display: flex;
   justify-content: space-between;
@@ -1527,7 +1556,7 @@ body {
 
 .menu-category.active {
   background: linear-gradient(135deg, #3b82f6, #06b6d4);
-  color: rgb(39, 37, 37);
+  color: #ffffff !important;
   border-color: transparent;
 }
 
@@ -3148,7 +3177,7 @@ body {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: #8b4513;
+  background: #3b82f6;
   color: white;
   display: flex;
   align-items: center;
@@ -3158,7 +3187,8 @@ body {
 }
 
 .profile-name {
-  color: #3b2b24;
+  
+  color: #1e293b;
   font-size: 13px;
   font-weight: 600;
 }
@@ -3611,7 +3641,7 @@ body {
 .add-expense-button {
   padding: 14px 28px;
   background: #3b82f6;
-  color: rgb(46, 43, 43);
+  color: #ffffff !important;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -3710,7 +3740,7 @@ body {
 
 .submit-button {
   background: #3b82f6;
-  color: rgb(78, 75, 75);
+  color: #ffffff !important;
 }
 
 .submit-button:hover {
@@ -5750,9 +5780,7 @@ button {
   box-sizing: border-box;
 }
 
-* {
-  max-width: 100%;
-}
+
 /* =====================================================
    MOBILE BILLING PAYMENT BUTTONS FIX
 ===================================================== */

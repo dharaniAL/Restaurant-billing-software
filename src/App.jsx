@@ -62,6 +62,7 @@ function App() {
       if (data.success) {
         setDashboardData(data);
       }
+     
     } catch (error) {
       console.error(
         "Failed to fetch dashboard:",
