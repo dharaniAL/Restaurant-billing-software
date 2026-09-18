@@ -135,10 +135,13 @@ body {
 }
 
 .brand h2 {
-  color: #102649;
-  font-size: 28px;
-  margin-bottom: 7px;
-  font-weight: 700;
+  color: #102649 !important;
+  font-size: 28px !important;
+  margin: 0 0 7px 0;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
 }
 
 .brand p {
@@ -1054,7 +1057,7 @@ body {
 }
 
 .section-heading h2 {
-  color: #1e293b;
+  color: #102649 !important;
   font-size: 18px;
   margin: 0;
   font-weight: 700;
@@ -1235,31 +1238,39 @@ body {
   overflow-y: auto;
 }
 
+/* EMPTY CART */
+
 .empty-cart {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
-  color: #94a3b8;
+  color: #1e293b;
   text-align: center;
+  opacity: 1;
 }
 
 .cart-symbol {
   font-size: 36px;
   margin-bottom: 12px;
-  opacity: 0.5;
+  opacity: 1;
+  color: #1e293b;
+  font-weight: 700;
 }
 
 .empty-cart h3 {
-  color: #64748b;
+  color: #1e293b;
   font-size: 14px;
   margin-bottom: 6px;
+  font-weight: 700;
+  opacity: 1;
 }
 
 .empty-cart p {
   font-size: 12px;
-  color: #94a3b8;
+  color: #64748b;
+  opacity: 1;
 }
 
 .cart-item {
@@ -6810,10 +6821,7 @@ body {
     font-size: 14px;
   }
 
-  .sidebar .brand h2,
-  .sidebar .sidebar-brand h2 {
-    display: none;
-  }
+  
 
   .sidebar .brand span,
   .sidebar .sidebar-brand p {
@@ -6939,4 +6947,34 @@ body {
   button {
     touch-action: manipulation;
   }
+}
+/* =========================================
+   SIDEBAR BRAND - FINAL
+========================================= */
+
+.sidebar .brand {
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+}
+
+.sidebar .brand > div:last-child {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.sidebar .brand h2 {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  filter: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+.sidebar .brand span {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
