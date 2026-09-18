@@ -515,14 +515,7 @@ function App() {
                 </p>
               </div>
 
-              <div className="notification">
-                🔔
-              </div>
-
-              <div className="profile">
-                {currentUser?.username || "User"}
-              </div>
-
+              
               <div className="date-time">
                 <strong>
                   {currentTime.toLocaleDateString(
